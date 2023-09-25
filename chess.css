@@ -1,0 +1,52 @@
+body{
+    background-color: #302E2B;
+}
+.container{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    display: flex;
+}
+.title-heading{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: white;
+    padding: 0px 20px 0px 20px;
+}
+.chessboard{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightblue;
+    height: 480px;
+    width: 480px;
+}
+
+/* .square{
+    height: 60px;
+    width: 60px;
+    background-color: rgb(16, 16, 54);
+} */
+
+.dark-blue{
+    height: 60px;
+    width: 60px;
+    background-color: #7D9FB3;
+}
+
+.light-blue{
+    height: 60px;
+    width: 60px;
+    background-color: #D4DFE5;
+}
+
+.light-blue,
+.dark-blue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
