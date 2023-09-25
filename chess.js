@@ -1,79 +1,5 @@
 const chessBoard = document.querySelector('.chessboard')
 
-const start_chessArray = [
-    {id : 'a1', row : 1, column : 1, player : 'rook', colour : 'black'},
-    {id : 'b1', row : 1, column : 2, player : 'knight', colour : 'black'},
-    {id : 'c1', row : 1, column : 3, player : 'bishop', colour : 'black'},
-    {id : 'd1', row : 1, column : 4, player : 'queen', colour : 'black'},
-    {id : 'e1', row : 1, column : 5, player : 'king', colour : 'black'},
-    {id : 'f1', row : 1, column : 6, player : 'bishop', colour : 'black'},
-    {id : 'g1', row : 1, column : 7, player : 'knight', colour : 'black'},
-    {id : 'h1', row : 1, column : 8, player : 'rook', colour : 'black'},
-
-    {id : 'a2', row : 2, column : 1, player : 'pawn', colour : 'black'},
-    {id : 'b2', row : 2, column : 2, player : 'pawn', colour : 'black'},
-    {id : 'c2', row : 2, column : 3, player : 'pawn', colour : 'black'},
-    {id : 'd2', row : 2, column : 4, player : 'pawn', colour : 'black'},
-    {id : 'e2', row : 2, column : 5, player : 'pawn', colour : 'black'},
-    {id : 'f2', row : 2, column : 6, player : 'pawn', colour : 'black'},
-    {id : 'g2', row : 2, column : 7, player : 'pawn', colour : 'black'},
-    {id : 'h2', row : 2, column : 8, player : 'pawn', colour : 'black'},
-
-    {id : 'a3', row : 3, column : 1}, 
-    {id : 'b3', row : 3, column : 2}, 
-    {id : 'c3', row : 3, column : 3}, 
-    {id : 'd3', row : 3, column : 4}, 
-    {id : 'e3', row : 3, column : 5}, 
-    {id : 'f3', row : 3, column : 6}, 
-    {id : 'g3', row : 3, column : 7}, 
-    {id : 'h3', row : 3, column : 8},
-
-    {id : 'a4', row : 4, column : 1}, 
-    {id : 'b4', row : 4, column : 2}, 
-    {id : 'c4', row : 4, column : 3}, 
-    {id : 'd4', row : 4, column : 4}, 
-    {id : 'e4', row : 4, column : 5}, 
-    {id : 'f4', row : 4, column : 6}, 
-    {id : 'g4', row : 4, column : 7}, 
-    {id : 'h4', row : 4, column : 8},
-    
-    {id : 'a5', row : 5, column : 1}, 
-    {id : 'b5', row : 5, column : 2}, 
-    {id : 'c5', row : 5, column : 3}, 
-    {id : 'd5', row : 5, column : 4}, 
-    {id : 'e5', row : 5, column : 5}, 
-    {id : 'f5', row : 5, column : 6}, 
-    {id : 'g5', row : 5, column : 7}, 
-    {id : 'h5', row : 5, column : 8},
-
-    {id : 'a6', row : 6, column : 1},
-    {id : 'b6', row : 6, column : 2}, 
-    {id : 'c6', row : 6, column : 3}, 
-    {id : 'd6', row : 6, column : 4}, 
-    {id : 'e6', row : 6, column : 5}, 
-    {id : 'f6', row : 6, column : 6}, 
-    {id : 'g6', row : 6, column : 7}, 
-    {id : 'h6', row : 6, column : 8},
-    
-    {id : 'a7', row : 7, column : 1, player : 'pawn', colour : 'white'},
-    {id : 'b7', row : 7, column : 2, player : 'pawn', colour : 'white'},
-    {id : 'c7', row : 7, column : 3, player : 'pawn', colour : 'white'},
-    {id : 'd7', row : 7, column : 4, player : 'pawn', colour : 'white'},
-    {id : 'e7', row : 7, column : 5, player : 'pawn', colour : 'white'},
-    {id : 'f7', row : 7, column : 6, player : 'pawn', colour : 'white'},
-    {id : 'g7', row : 7, column : 7, player : 'pawn', colour : 'white'},
-    {id : 'h7', row : 7, column : 8, player : 'pawn', colour : 'white'},
-
-    {id : 'a8', row : 8, column : 1, player : 'rook', colour : 'white'},
-    {id : 'b8', row : 8, column : 2, player : 'knight', colour : 'white'},
-    {id : 'c8', row : 8, column : 3, player : 'bishop', colour : 'white'},
-    {id : 'd8', row : 8, column : 4, player : 'queen', colour : 'white'},
-    {id : 'e8', row : 8, column : 5, player : 'king', colour : 'white'},
-    {id : 'f8', row : 8, column : 6, player : 'bishop', colour : 'white'},
-    {id : 'g8', row : 8, column : 7, player : 'knight', colour : 'white'},
-    {id : 'h8', row : 8, column : 8, player : 'rook', colour : 'white'},
-]
-
 
 start_chessArray.forEach((element, i) => {
     // console.log(element.id)
@@ -144,36 +70,172 @@ function getPossibleMoves(piece){
         break;
     }
     console.log(possibleArray)
+
+    // possibleArray.forEach((element) => {
+    //     document.querySelectorAll('.box').find((i) => i.row === element.r && i.column === element.c).classList.add('colour-change')
+    // })
+
+ 
+
+    // document.querySelectorAll('.box').forEach((element) => {
+    //     const p = element.row
+    //     if(possibleArray.includes(`${element.row}`)){
+    //         if(possibleArray.includes(`${element.column}`)){
+    //             console.log('hi')
+    //         }
+    //     }
+    // })
 }
 
-
+//----------------------------------------------------------------------------------------------------------------------------
 function pawnMove(piece){
     if(piece.colour === 'white'){
-        possibleArray.push({r: piece.row - 1, col : piece.column})
+        possibleArray.push({r: piece.row - 1, c : piece.column})
     }else{
-        possibleArray.push({r: piece.row - 1, col : piece.column})
+        possibleArray.push({r: piece.row - 1, c : piece.column})
     }
 }
+
+//----------------------------------------------------------------------------------------------------------------------------
 
 function rookMove(piece){
+    const rookMoves = [];
     for(let i = 1; i <=8 ; i++ ){
-        possibleArray.push({r : piece.row, c : i})
-        possibleArray.push({r : i, c : piece.column})
+        rookMoves.push({r : piece.row, c : i})
+        rookMoves.push({r : i, c : piece.column})
     }
+    rookMoves.forEach((item) => {
+        if(item.r != piece.row || item.c != piece.column){
+            possibleArray.push(item)
+        }
+    })
 }
+
+//----------------------------------------------------------------------------------------------------------------------------
 
 function knightMove(piece){
+    let i = piece.row;
+    let j = piece.column;
+    const knightMoves = [
+        {r: i-2, c : j+1},
+        {r: i-2, c : j-1},
+        {r: i-1, c : j+2},
+        {r: i-1, c : j-2},
+        {r: i+1, c : j+2},
+        {r: i+1, c : j-2},
+        {r: i+2, c : j+1},
+        {r: i+2, c : j-1},
+    ];
 
+    knightMoves.forEach((item) => {
+        if(item.r >= 1 && item.r <= 8 && item.c >=1 && item.c <= 8){
+            possibleArray.push(item)
+        }
+    })
 }
+
+//----------------------------------------------------------------------------------------------------------------------------
 
 function bishopMove(piece){
+    let bishopMoves = [];
+    let i = piece.row - 1;
+    let j = piece.column - 1;
+    let k = piece.column + 1;
+    while(i >= 1){
+        if(j >= 1){
+            bishopMoves.push({r: i, c : j})
+            j--;
+        }
+        if(k <=8){
+            bishopMoves.push({r : i, c : k})
+            k++;
+        }
+        i--;
+    }
 
+    i = piece.row + 1;
+    j = piece.column - 1;
+    k = piece.column + 1;
+    while(i <= 8){
+        if(j >= 1){
+            bishopMoves.push({r: i, c : j})
+            j--;
+        }
+        if(k <= 8){
+            bishopMoves.push({r : i, c : k})
+            k++;
+        }   
+        i++;
+    }
+    possibleArray = bishopMoves;
 }
+
+//----------------------------------------------------------------------------------------------------------------------------
 
 function queenMove(piece){
+    let queenMoves = [];
 
+    let i = piece.row - 1;
+    let j = piece.column - 1;
+    let k = piece.column + 1;
+    // loop for horizontal rows
+    for(let l = 1; l <= 8; l++){
+        if(l != piece.column){
+            queenMoves.push({r : piece.row, c : l})
+        }
+    }
+    // loop for upper part
+    while(i >= 1){
+    queenMoves.push({r : i, c : piece.column})
+        if(j >= 1){
+            queenMoves.push({r: i, c : j})
+            j--;
+        }
+        if(k <=8){
+            queenMoves.push({r : i, c : k})
+            k++;
+        }
+        i--;
+    }
+
+    i = piece.row + 1;
+    j = piece.column - 1;
+    k = piece.column + 1;
+    // loop for lower part
+    while(i <= 8){
+        queenMoves.push({r : i, c : piece.column})
+        if(j >= 1){
+            queenMoves.push({r: i, c : j})
+            j--;
+        }
+        if(k <= 8){
+            queenMoves.push({r : i, c : k})
+            k++;
+        }   
+        i++;
+    }
+    possibleArray = queenMoves;
 }
 
-function kingMove(piece){
+//----------------------------------------------------------------------------------------------------------------------------
 
+function kingMove(piece){
+    let i = piece.row;
+    let j = piece.column;
+    const kingMoves = [
+        {r: i, c : j-1},
+        {r: i, c : j+1},
+        {r: i+1, c : j},
+        {r: i-1, c : j},
+        {r: i-1, c : j-1},
+        {r: i+1, c : j+1},
+        {r: i-1, c : j+1},
+        {r: i+1, c : j-1},
+    ];
+
+    kingMoves.forEach((item) => {
+        if(item.r >= 1 && item.r <= 8 && item.c >=1 && item.c <= 8){
+            possibleArray.push(item)
+        }
+    })
 }
